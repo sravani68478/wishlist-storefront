@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Storefront</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Simple Store</h1>
+
+        <nav>
+          <button id="products-tab" class="nav-btn active">Products</button>
+          <button id="wishlist-tab" class="nav-btn">Wishlists</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- PRODUCTS -->
+      <section id="products-section">
+        <h2>Products</h2>
+
+        <div id="product-grid" class="product-grid">
+          <!-- Products rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- WISHLIST -->
+      <section id="wishlist-section">
+        <h2>Wishlists</h2>
+
+        <div class="wishlist-controls">
+          <input
+            id="wishlist-name"
+            type="text"
+            maxlength="50"
+            placeholder="Wishlist name"
+          />
+
+          <button id="create-wishlist">Create Wishlist</button>
+        </div>
+
+        <div id="wishlist-list"></div>
+
+        <hr />
+
+        <h3>Selected Wishlist</h3>
+
+        <div id="wishlist-products">Select a wishlist...</div>
+      </section>
+
+      <!-- MERGE -->
+
+      <section id="merge-section">
+        <h2>Merge Wishlists</h2>
+
+        <div class="merge-controls">
+          <select id="merge-a">
+            <option value="">Wishlist A</option>
+          </select>
+
+          <select id="merge-b">
+            <option value="">Wishlist B</option>
+          </select>
+
+          <input
+            id="merge-name"
+            type="text"
+            maxlength="50"
+            placeholder="Merged wishlist name"
+          />
+
+          <button id="merge-button">Merge</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="storage.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="merge.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
